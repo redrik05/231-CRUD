@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All USERS</title>
+
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>LAST NAME</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="an, iterStat : ${users}"
+      th:style="${iterStat.odd}? 'font-weight: bold;'">
+    <td th:text="${an.getId()}"></td>
+    <td th:text="${an.name}"></td>
+    <td th:text="${an.lastName}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
