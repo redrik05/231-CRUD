@@ -12,7 +12,7 @@ import web.service.UserService;
 @RequestMapping("/users")
 public class UserController implements WebMvcConfigurer {
 
-    UserService userService;
+    private final UserService userService;
 
     public UserController(UserService serv) {
         this.userService = serv;
